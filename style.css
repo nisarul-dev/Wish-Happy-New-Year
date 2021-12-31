@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+/*
+font-family: 'Bebas Neue', cursive;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+  background-color: black;
+}
+
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  height: 12em;
+  width: 12em;
+  border: 1em solid rgb(102, 11, 177);
+  box-shadow: 0 0 0 .4em black,
+              0 0 0 .5em rgb(223, 16, 137),
+              0 0 0 .9em black,
+              0 0 0 1em white;
+
+  border-radius: 50%;
+}
+
+p {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4em;
+    text-align: center;
+    line-height: 1.7em;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+p#hny {
+  transform: skew(-7deg);
+  text-shadow: 1px 1px 0 #ccc,
+                 2px 2px 0 #ccc,
+                 3px 3px 0 #ccc,
+                 10px 10px 0 rgba(0, 0, 0, 0.2);
+  animation: floating 5s ease-in-out infinite;
+
+}
+
+p#hny span {
+    font-size: 2.75em;
+    text-shadow: 1px 1px 0 #ccc,
+                 2px 2px 0 #ccc,
+                 3px 3px 0 #ccc,
+                 4px 4px 0 #ccc,
+                 5px 5px 0 #ccc,
+                 10px 10px 0 rgba(0, 0, 0, 0.2)
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: skew(-7deg) translate(0, -15px);
+  }
+  50% {
+    transform: skew(-7deg) translate(0, 15px);
+  }
+}
+
+/* // Stars */
+section i {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px white,
+              0 0 20px white,
+              0 0 40px white,
+              0 0 80px white;
+  animation: animate linear infinite;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+footer {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.4em;
+}
+footer span {
+  font-size: 1.3em;
+}
+
+@media screen and (max-width: 900px) {
+  * {
+    font-size: .9em;
+  }
+}
+
+

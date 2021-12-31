@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Happy New Year: </title>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <div class="root">
+            <p id="hny">Happy New Year<br><span>2022</span></p>
+            <p id="name">Everyone</p>
+        </div>
+    </section>
+
+    <footer><p>Wished by <span>Nisarul</span></p></footer>
+
+    <script>
+        const url = new URL(window.location.href);
+        const name = url.searchParams.get("name");
+        const year = url.searchParams.get("year");
+        const from = url.searchParams.get("from");
+
+        if(name) document.querySelector("#name").textContent = name;
+        if(year) document.querySelector("p span").textContent = year;
+        if(year) document.querySelector("footer span").textContent = from;
+
+        function stars() {
+            const count = 200;
+            const root = document.querySelector('section');
+            let i = 0;
+
+            while(i < count) {
+                const star = document.createElement('i');
+                const x = Math.floor(Math.random() * window.innerWidth);
+                const y = Math.floor(Math.random() * window.innerHeight);
+
+                const size = Math.random() * 4;
+                star.style.left = x+'px';
+                star.style.top = y+'px';
+                star.style.width = 1+size+'px';
+                star.style.height = 1+size+'px';
+
+                const duration = Math.random() * 2;
+
+                star.style.animationDuration = 2+duration+'s';
+
+                root.appendChild(star);
+                i++;
+            }
+        }
+        stars();
+
+    </script>
+</body>
+</html>
