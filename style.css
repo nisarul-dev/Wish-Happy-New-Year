@@ -44,6 +44,7 @@ p {
     font-family: 'Bebas Neue', cursive;
     font-size: 4em;
     text-align: center;
+    text-transform: uppercase;
     line-height: 1.7em;
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
