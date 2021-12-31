@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Happy New Year: </title>
+    <title>Happy New Year</title>
 </head>
 <body>
     <section>
@@ -24,9 +24,13 @@
         const year = url.searchParams.get("year");
         const from = url.searchParams.get("from");
 
-        if(name) document.querySelector("#name").textContent = name;
+        if(name) {
+            document.querySelector("#name").textContent = name;
+            document.title = document.title+": "+ name;
+        }
         if(year) document.querySelector("p span").textContent = year;
-        if(year) document.querySelector("footer span").textContent = from;
+        if(from) document.querySelector("footer span").textContent = from;
+
 
         function stars() {
             const count = 200;
